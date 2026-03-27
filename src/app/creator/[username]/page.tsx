@@ -186,7 +186,7 @@ export default function CreatorPage() {
                   <XAxis dataKey="day" hide />
                   <Tooltip 
                     contentStyle={{ borderRadius: '8px', border: '1px solid #E2E8F0', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }}
-                    formatter={(value: number) => [formatNumber(value), "Followers"]}
+                    formatter={(value: any) => [formatNumber(Number(value)), "Followers"] as any}
                     labelStyle={{ display: 'none' }}
                   />
                   <Line type="monotone" dataKey="followers" stroke="#4F46E5" strokeWidth={3} dot={false} activeDot={{ r: 6, fill: "#4F46E5", stroke: "#fff", strokeWidth: 2 }} />
